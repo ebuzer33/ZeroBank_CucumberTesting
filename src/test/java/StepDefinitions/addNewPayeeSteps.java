@@ -62,6 +62,7 @@ public class addNewPayeeSteps {
 
     @Then("^error message should be displayed$")
     public void errorMessageShouldBeDisplayed() {
-       dc.findAndContainsAttribute("account","alanı doldurun");
+        String validationMessage=dc.account.getAttribute("validationMessage");
+        dc.findAndContainsAttribute("account",validationMessage);
     }
 }

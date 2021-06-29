@@ -1,15 +1,15 @@
 package Pages;
 
-import Utilities.BaseDriver;
+import Utilities.baseDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class loginPage extends Parent{
+public class loginPage extends parent {
 
     public loginPage() {
 
-        PageFactory.initElements(BaseDriver.getDriver(),this);
+        PageFactory.initElements(baseDriver.getDriver(),this);
     }
 
     @FindBy(id = "signin_button")

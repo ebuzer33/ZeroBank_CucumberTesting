@@ -1,11 +1,11 @@
 package Utilities;
 
-import Pages.Parent;
+import Pages.parent;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class BaseDriver {
+public class baseDriver {
 
     public static WebDriver driver;
 
@@ -20,7 +20,7 @@ public class BaseDriver {
 
     public static void DriverQuit() {
 
-        Parent.waiting(5);
+        parent.waiting(5);
 
         if (driver != null) {
             driver.quit();

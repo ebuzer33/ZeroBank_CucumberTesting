@@ -1,7 +1,7 @@
 package StepDefinitions;
 
 import Pages.loginPage;
-import Utilities.BaseDriver;
+import Utilities.baseDriver;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -15,7 +15,7 @@ public class loginSteps {
     @Given("^Navigate to website$")
     public void navigateToWebsite()
     {
-        WebDriver driver= BaseDriver.getDriver();
+        WebDriver driver= baseDriver.getDriver();
         driver.get("http://zero.webappsecurity.com/");
         driver.manage().window().maximize();
     }
@@ -45,7 +45,7 @@ public class loginSteps {
     public void verifyThatYouAreLoggedIn()
     {
         String expected="http://zero.webappsecurity.com/bank/account-summary.html";
-        String actual= BaseDriver.getDriver().getCurrentUrl();
+        String actual= baseDriver.getDriver().getCurrentUrl();
         Assert.assertEquals(expected,actual);
     }
 }

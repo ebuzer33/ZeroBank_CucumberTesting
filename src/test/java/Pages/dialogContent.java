@@ -1,14 +1,14 @@
 package Pages;
 
-import Utilities.BaseDriver;
+import Utilities.baseDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class dialogContent extends Parent {
+public class dialogContent extends parent {
 
     public dialogContent() {
-        PageFactory.initElements(BaseDriver.getDriver(), this);
+        PageFactory.initElements(baseDriver.getDriver(), this);
     }
 
     @FindBy(xpath = "//li[@id='pay_bills_tab']/a")
@@ -24,7 +24,7 @@ public class dialogContent extends Parent {
     private WebElement payeeAddress;
 
     @FindBy(id = "np_new_payee_account")
-    private WebElement account;
+    public WebElement account;
 
     @FindBy(id = "np_new_payee_details")
     private WebElement payeeDetails;
@@ -39,7 +39,7 @@ public class dialogContent extends Parent {
     private WebElement foreignCurrency;
 
     @FindBy(css = "#pc_currency")
-    public WebElement currencySelect;
+    private WebElement currencySelect;
 
     @FindBy(css = "input[id='pc_amount']")
     private WebElement amount;
@@ -138,7 +138,7 @@ public class dialogContent extends Parent {
                 myElement = currencySelect;
                 break;
         }
-        selectedAndClick(currencySelect, value1);
+        selectedAndClick(myElement, value1);
     }
 
 

@@ -1,10 +1,10 @@
 package StepDefinitions;
 
-import Utilities.BaseDriver;
+import Utilities.baseDriver;
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
 
-public class Hooks {
+public class hooks {
 
     @Before
     public void before()
@@ -15,9 +15,9 @@ public class Hooks {
     @After
     public void after()
     {
-        if (BaseDriver.getDriver()!=null)
+        if (baseDriver.getDriver()!=null)
         {
-            BaseDriver.DriverQuit();
+            baseDriver.DriverQuit();
         }
     }
 

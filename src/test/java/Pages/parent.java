@@ -1,6 +1,6 @@
 package Pages;
 
-import Utilities.BaseDriver;
+import Utilities.baseDriver;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -9,12 +9,12 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import java.util.Locale;
 
-public class Parent {
+public class parent {
 
     static WebDriverWait wait;
 
-    public Parent() {
-        wait = new WebDriverWait(BaseDriver.getDriver(), 15);
+    public parent() {
+        wait = new WebDriverWait(baseDriver.getDriver(), 15);
     }
 
     public void sendKeysFunction(WebElement element, String value) {
@@ -35,7 +35,7 @@ public class Parent {
     }
 
     public void scrollToElement(WebElement element) {
-        JavascriptExecutor js = (JavascriptExecutor) BaseDriver.getDriver();
+        JavascriptExecutor js = (JavascriptExecutor) baseDriver.getDriver();
         js.executeScript("arguments[0].scrollIntoView();", element);
     }
 
@@ -70,7 +70,7 @@ public class Parent {
 
     public void javaScriptExecutorClick(WebElement element)
     {
-        JavascriptExecutor js= (JavascriptExecutor) BaseDriver.getDriver();
+        JavascriptExecutor js= (JavascriptExecutor) baseDriver.getDriver();
         js.executeScript("arguments[0].click()", element);
     }
 }
